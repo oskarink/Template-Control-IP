@@ -1,0 +1,12 @@
+﻿<Window x:Class="ControlIT.WPFProgressBar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        
+        Title="Exportando a Excel...." Height="46.789" Width="411.468"  WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" >
+    
+    <Grid Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}">
+      
+
+
+    </Grid>
+</Window>

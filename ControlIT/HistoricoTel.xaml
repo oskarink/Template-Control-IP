@@ -1,0 +1,94 @@
+﻿<Window x:Class="ControlIT.HistoricoTel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControlIT"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        
+        Title="Historico por Numero de Liena" Height="410" Width="1157" Icon="right.ico">
+
+    
+    
+            <Grid Margin="0,0,2,1" RenderTransformOrigin="0.494,0.345">
+
+
+        <DataGrid  x:Name="myDataGrid" Visibility="Visible"  Grid.Row="2" Grid.Column="0" Height="Auto" 
+                       
+           VerticalAlignment="Stretch"
+                   HorizontalAlignment="Left" 
+              BorderThickness="0"
+             
+
+       		 RenderTransformOrigin="0.5,0.5"   AlternatingRowBackground="White" AutoGenerateColumns="False" IsTextSearchEnabled="True"  IsReadOnly="True" 
+             HorizontalGridLinesBrush="#FFADC7DE"  BorderBrush="{x:Null}"  Margin="0,0,0,0"    >
+
+
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Binding="{Binding ID}" Header="ID" HeaderStringFormat="ID" Width="Auto"/>
+
+                <DataGridTextColumn Binding="{Binding Planta}" Header="Planta" HeaderStringFormat="Planta" Width="Auto"/>
+                <DataGridTextColumn Binding="{Binding Cuenta}" Header="Cuenta" HeaderStringFormat="Cuenta" Width="Auto"/>
+                <DataGridTextColumn Binding="{Binding NoEmpleado}" Header="NoEmpleado" HeaderStringFormat="NoEmpleado" Width="Auto"/>
+                <DataGridTextColumn Binding="{Binding Puesto}" Header="Puesto" HeaderStringFormat="Puesto" Width="Auto"/>
+                <DataGridTextColumn Binding="{Binding Nombre}" Header="Nombre" HeaderStringFormat="Nombre" Width="Auto"/>
+                <DataGridTextColumn Binding="{Binding Area}" Header="Area" HeaderStringFormat="Area" Width="Auto"/>
+                <DataGridTextColumn Binding="{Binding Linea  }" Header="Linea  " HeaderStringFormat="Linea  " Width="Auto"/>
+                <DataGridTextColumn Binding="{Binding Plan }" Header="Plan " HeaderStringFormat="Plan " Width="Auto"/>
+                <DataGridTextColumn Binding="{Binding MinMEXEUACAN}" Header="MinMEXEUACAN" HeaderStringFormat="MinMEXEUACAN" Width="Auto"/>
+                <DataGridTextColumn Binding="{Binding MNSMEXEUACAN}" Header="MNSMEXEUACAN" HeaderStringFormat="MNSMEXEUACAN" Width="Auto"/>
+                <DataGridTextColumn Binding="{Binding DatosMEXEUACAN}" Header="DatosMEXEUACAN" HeaderStringFormat="DatosMEXEUACAN" Width="Auto"/>
+                <DataGridTextColumn Binding="{Binding DatosTotCONPROMOD}" Header="DatosTotCONPROMOD" HeaderStringFormat="DatosTotCONPROMOD" Width="Auto"/>
+                <DataGridTextColumn Binding="{Binding RedesSocialesMex}" Header="RedesSocialesMex" HeaderStringFormat="RedesSocialesMex" Width="Auto"/>
+                <DataGridTextColumn Binding="{Binding Renta }" Header="Renta " HeaderStringFormat="Renta " Width="Auto"/>
+                <DataGridTextColumn Binding="{Binding MesesRestantes}" Header="MesesRestantes" HeaderStringFormat="MesesRestantes" Width="Auto"/>
+                <DataGridTextColumn Binding="{Binding Marca}" Header="Marca" HeaderStringFormat="Marca" Width="Auto"/>
+                <DataGridTextColumn Binding="{Binding Modelo}" Header="Modelo" HeaderStringFormat="Modelo" Width="Auto"/>
+                <DataGridTextColumn Binding="{Binding NumParte}" Header="NumParte" HeaderStringFormat="NumParte" Width="Auto"/>
+                <DataGridTextColumn Binding="{Binding Precio}" Header="Precio" HeaderStringFormat="Precio" Width="Auto"/>
+                <DataGridTextColumn Binding="{Binding NSerie}" Header="NSerie" HeaderStringFormat="NSerie" Width="Auto"/>
+                <DataGridTextColumn Binding="{Binding IMEI}" Header="IMEI" HeaderStringFormat="IMEI" Width="Auto"/>
+
+
+
+
+            </DataGrid.Columns>
+
+
+            <DataGrid.RowDetailsTemplate >
+                <DataTemplate>
+                    <Border BorderThickness="0" Background="LightBlue"  Padding="10">
+                        <StackPanel Orientation="Vertical">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontSize="12" Text="Notas  :   " VerticalAlignment="Top" HorizontalAlignment="Left"  />
+                                <TextBlock FontSize="16" Foreground="MidnightBlue" Text="{Binding Expr1}" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </DataGrid.RowDetailsTemplate>
+
+            <DataGrid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.206" AngleX="0.014"/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </DataGrid.RenderTransform>
+            <DataGrid.Effect>
+                <DropShadowEffect BlurRadius="0" ShadowDepth="2"/>
+            </DataGrid.Effect>
+
+        </DataGrid>
+
+
+
+
+    </Grid>
+    
+    
+    
+</Window>
+    

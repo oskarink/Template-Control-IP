@@ -1,0 +1,59 @@
+﻿<Window x:Class="ControlIT.Login"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControlIT"
+        mc:Ignorable="d"
+        xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Login" Height="400" Width="600" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="361*"/>
+            <ColumnDefinition Width="239*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle RadiusY="8" RadiusX="8" Fill="White" Grid.ColumnSpan="2"/>
+        <Image Source="Assets/bglogin1.png" Margin="310,0,0,0" Stretch="UniformToFill" Grid.ColumnSpan="2"/>
+        <Rectangle Margin="310,0,0,0" Grid.ColumnSpan="2">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#0B3861" Offset="1"/>
+                    <GradientStop Color="Transparent"/>
+                    <GradientStop Color="Transparent"  Offset="0.566"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <StackPanel Margin="20,10,51.062,10">
+            <Label Content="Iniciar Sesion" FontFamily="Segoe UI Black" FontSize="24" Margin="0,10" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            
+            
+            
+            
+            
+            <StackPanel Orientation="Horizontal">
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Foreground="#707070"><Run Text="Hutchinson "/></TextBlock>
+            </StackPanel>
+            <StackPanel Margin="0,15" Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center" Foreground="#707070"/>
+                <TextBox x:Name="tbxUsuario" materialDesign:HintAssist.Hint="Usuario" Width="250" Margin="5"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Key" VerticalAlignment="Center" Foreground="#707070"/>
+                <PasswordBox x:Name="tbxPassword" materialDesign:HintAssist.Hint="Clave" Width="250" Margin="5" MouseDown="tbxPassword_MouseDown" KeyDown="tbxPassword_KeyDown"/>
+            </StackPanel>
+            <Grid/>
+
+
+            <StackPanel Orientation="Horizontal" Margin="10,35" HorizontalAlignment="Right">
+                <Button Content="Cancelar" HorizontalAlignment="Right"  FontSize="14" Background="#FFE05959" BorderBrush="#FFE05959" Click="Button_Click_1"/>
+                <Button  Margin="10,0,0,0" HorizontalAlignment="Right" Content="LOGIN"  FontSize="14" Width="100" Background="#FF307CD6" BorderBrush="#FF307CD6" Click="Button_Click"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Margin="310,10,0,50" Grid.ColumnSpan="2">
+            <TextBlock Text="Control IT"  Foreground="White" HorizontalAlignment="Center" FontSize="20" FontFamily="Champagne &amp; Limousines" FontWeight="Bold"/>
+            <TextBlock Text="Infraestructura" Foreground="White" FontSize="13" FontFamily="Champagne &amp; Limousines" TextWrapping="Wrap" TextAlignment="Right" Margin="10"/>
+        </StackPanel>
+    </Grid>
+</Window>
